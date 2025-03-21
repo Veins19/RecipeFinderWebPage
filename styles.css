@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-container input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.favourites-container {
+    margin: 20px;
+}
+
+.favourites-container h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+.recipe-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 50px; /* Make space for the favourite button */
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card .details {
+    padding: 15px;
+    text-align: center;
+}
+
+.recipe-card .details h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.recipe-card .details p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 10;
+    overflow-y: auto;
+    padding-bottom: 50px; /* Ensure the dropdown doesn't overlap with the favourite button */
+}
+
+.recipe-card:hover .dropdown {
+    display: block;
+}
+
+.favourite-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px; /* Place the button at the bottom of the card */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15; /* Ensure the favourite button is on top */
+}
+
+.favourite-btn:hover {
+    background-color: #ff4a3a;
+}
+.favourites-container {
+    background-color: #ffe9e4; /* Light coral color for distinction */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
